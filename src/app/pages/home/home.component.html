@@ -1,8 +1,16 @@
+<div class="main-container">
+  <div class="post-container">
+    <app-post *ngFor="let item of posts" (onDeletePost)="onDelete($event)" [post]="item"></app-post>
+    <hr>
+    <div class="new-post-title">
+      New Posting
+    </div>
+    <app-create-post></app-create-post>
+  </div>
+  <div class="ads-container">
 
-<app-post class="screen-8" *ngFor="let item of posts" (onDeletePost)="onDelete($event)" [post]="item"></app-post>
-<!-- post form -->
-<div>
-  New Post
+      <app-ad></app-ad>
+      <app-ad></app-ad>
+      <app-ad></app-ad>
+  </div>
 </div>
-<app-create-post></app-create-post>
-

@@ -11,6 +11,9 @@ import { PostService } from './pages/post.service';
 import { CreatePostComponent } from './pages/create-post/create-post.component';
 import { ToolbarComponent } from './pages/toolbar/toolbar.component';
 import { PopupComponent } from './pages/popup/popup.component';
+import { AdComponent } from './pages/ad/ad.component';
+
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -19,13 +22,16 @@ import { PopupComponent } from './pages/popup/popup.component';
     PostComponent,
     CreatePostComponent,
     ToolbarComponent,
-    PopupComponent
+    PopupComponent,
+    AdComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     AppRoutingModule
+    // ,
+    // FlexLayoutModule
   ],
   providers: [PostService],
   bootstrap: [AppComponent]
