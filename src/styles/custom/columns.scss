@@ -1,0 +1,8 @@
+.row {clear: both;}
+
+.column {padding: 0 2%}
+
+@for $i from 1 through 12 {
+  $w: ($i / 12) * 100;
+  .screen-#{$i} {width: $w; float: left}
+}

@@ -6,11 +6,20 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
+import { PostComponent } from './pages/post/post.component';
+import { PostService } from './pages/post.service';
+import { CreatePostComponent } from './pages/create-post/create-post.component';
+import { ToolbarComponent } from './pages/toolbar/toolbar.component';
+import { PopupComponent } from './pages/popup/popup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    PostComponent,
+    CreatePostComponent,
+    ToolbarComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +27,7 @@ import { HomeComponent } from './pages/home/home.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

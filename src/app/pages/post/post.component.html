@@ -1,0 +1,31 @@
+<!-- Top Section -->
+<div class="row" style="background-color: tomato">
+  <div class="post-info-image screen-3">
+    <img [src]="post.avatarUrl">
+  </div>
+  <div class="column">
+    <div class="post-info-name-date column screen-8" style="background-color: green">
+      <div class="name">
+        {{post.name}}
+      </div>
+      <div class="date">
+        {{ post.postDate | date:'MMMM dd, yyyy' }}
+      </div>
+    </div>
+  </div>
+  <div class="column screen-1" (click)="deletePost()">
+    x
+  </div>
+</div>
+<!-- Image -->
+<div class="row">
+  <div class="column screen-12">
+    <img [src]="post.largeImageUrl" alt="">
+  </div>
+</div>
+<!-- Message -->
+<div class="row">
+  <div class="screen-12">
+    {{post.message}}
+  </div>
+</div>

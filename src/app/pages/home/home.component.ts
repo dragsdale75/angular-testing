@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PostService } from '../post.service';
+import { Post } from '../post';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  posts: Post[];
+
+
+  constructor(private postService: PostService) {
+    this.posts = postService.posts;
+  }
 
   ngOnInit() {
   }
+
+
+  onDelete(value: Post) {
+    console.log('Delete Post');
+    console.log(value);
+
+     this.postService.deletePost(value);
+  }
+
+
 
 }
