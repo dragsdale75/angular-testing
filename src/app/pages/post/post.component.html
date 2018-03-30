@@ -3,25 +3,26 @@
   <div class="post-info-image">
     <img [src]="post.avatarUrl">
   </div>
-  <div class="column">
-    <div class="post-info-name-date">
-      <div class="name">
-        {{post.name}}
-      </div>
-      <div class="date w3-opacity">
-        {{ post.postDate | date:'MMMM dd, yyyy' }}
-      </div>
+
+  <div class="post-info-name-date">
+    <div class="name">
+      {{post.name}}
+    </div>
+    <div class="date">
+      {{ post.postDate | date:'MMMM dd, yyyy' }}
     </div>
   </div>
   <div class="delete-post" (click)="deletePost()">
     x
   </div>
+
+
 </div>
 <!-- Image -->
-<div >
-    <img class="large-image" [src]="post.largeImageUrl" alt="">
+<div>
+  <img class="large-image" [src]="post.largeImageUrl" alt="">
 </div>
 <!-- Message -->
 <div class="message-container">
-    {{post.message}}
+  {{post.message}}
 </div>
