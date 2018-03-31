@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --aot",
+    "build": "ng build --prod",
     "test": "ng test --single-run && ng e2e",
     "pretest": "ng lint && npm run stylelint && npm run htmlhint",
     "stylelint": "stylelint src/styles.scss src/styles/**/*.scss",
