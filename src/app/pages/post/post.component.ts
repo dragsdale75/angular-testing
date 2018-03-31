@@ -11,18 +11,25 @@ export class PostComponent implements OnInit {
 
 @Input() post: Post;
 @Output() onDeletePost = new EventEmitter<Post>();
+messageBoxActive: Boolean;
 
-
-  constructor() { }
+  constructor() {
+    this.messageBoxActive = false;
+  }
 
   ngOnInit() {
     console.log(this.post);
   }
 
-  deletePost() {
+  confirmDelete() {
+    this.messageBoxActive = true;
+  }
 
-    let answer = confirm('Are you sure?');
-    if (answer === true)
+  onDeleteResponse(del: boolean) {
+    this.messageBoxActive = false;
+
+    // let answer = confirm('Are you sure?');
+    if (del === true)
     {
        this.onDeletePost.emit(this.post);
 

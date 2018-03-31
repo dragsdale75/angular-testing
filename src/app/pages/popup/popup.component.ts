@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-popup',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./popup.component.scss']
 })
 export class PopupComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  @Output() onDeleteResponse = new EventEmitter<boolean>();
+  ngOnInit(): void {
   }
+
+
+  reply(answer: boolean) {
+    this.onDeleteResponse.emit(answer);
+  }
+
 
 }

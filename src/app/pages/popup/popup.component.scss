@@ -1,0 +1,48 @@
+.Prompt {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+}
+
+.Prompt .Prompt-overlay {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.Prompt .Prompt-content {
+   position: relative;
+   z-index: 2;
+   width: 350px;
+   background: #FFF;
+   margin: 150px auto 0;
+   background: #FFF;
+   padding: 20px;
+   text-align: center;
+   border-radius: 5px;
+}
+
+button {
+  border-radius: 5px;
+  height: 30px;
+  color: white;
+  width: 75px;
+}
+
+.delete {
+  background-color: red;
+
+
+}
+
+.cancel {
+  background-color: gray;
+}

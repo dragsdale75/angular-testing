@@ -13,8 +13,6 @@ import { ToolbarComponent } from './pages/toolbar/toolbar.component';
 import { PopupComponent } from './pages/popup/popup.component';
 import { AdComponent } from './pages/ad/ad.component';
 
-import { FlexLayoutModule } from '@angular/flex-layout';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,8 +28,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FormsModule,
     HttpModule,
     AppRoutingModule
-    // ,
-    // FlexLayoutModule
   ],
   providers: [PostService],
   bootstrap: [AppComponent]

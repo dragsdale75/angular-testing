@@ -1,3 +1,6 @@
+
+
+
 * {
   background-color: lightgrey;
 }
@@ -12,13 +15,14 @@
   .post-container {
     width: 600px;
     margin-top: 30px;
+    display: flex;
     flex-direction: column;
 
   }
 
   app-post {
     margin-bottom: 25px;
-    box-shadow: 5px 5px red;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.30);
   }
 
 
@@ -32,7 +36,7 @@
 
     app-ad {
       margin-bottom: 25px;
-      box-shadow: 5px 5px purple;
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,0.30);
 
 
     }
@@ -43,6 +47,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  app-create-post {
+    margin-bottom: 40px;
   }
 
 
