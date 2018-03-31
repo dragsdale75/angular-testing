@@ -28,7 +28,7 @@
     align-self: initial;
 
     .date {
-      opacity: .7;
+      opacity: .7;// $dimOpacity;
     }
     .name {
       font-weight: bold;
@@ -40,7 +40,7 @@
     width: 20px;
     padding: 6px;
     text-align: right;
-    opacity: .7;
+    opacity:  .7;
 
 
   }

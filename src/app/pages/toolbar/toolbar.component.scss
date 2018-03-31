@@ -1,5 +1,5 @@
 nav {
-  background-color: lighten(black, 20%);
+  background-color: lighten(black, 30%);
   position: relative;
   top: 0;
   width: 100%;
@@ -7,9 +7,9 @@ nav {
   // display: table;
   // clear: both;
 
-  display: flex;
+  //display: flex;
   //flex-direction: row;
-  justify-content: space-evenly;
+  //justify-content: space-evenly;
   width: 1240px;
   align-self: center;
 
@@ -31,11 +31,23 @@ nav {
     border-right: 1px solid rgba(0, 0, 0, 0.2);
     transition: background 0.3s linear;
     --webkit-transition: background 0.3s linear;
+    display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   }
   ul li a:hover {
     background-color: black;
   }
   ul li a.active {
+    background-color: red;
+  }
+
+  .circle {
+    border-radius: 25%;
+    // width: 100px;
+    // height: 50px;
+    padding: 1px 10px 1px 10px;
+
     background-color: red;
   }
 

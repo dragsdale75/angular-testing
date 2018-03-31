@@ -7,3 +7,16 @@ body {
   display: flex;
   justify-content: center;
 }
+
+$dimOpacity: .7;
+
+.row { clear: both}
+.column { padding: 0 $gutter}
+
+@for $i from 1 through 12 {
+  $w: ($i / 12) * 100%;
+  .md-#{$i} {
+    width: $w;
+    float: left;
+  }
+}
