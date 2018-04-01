@@ -1,19 +1,16 @@
+@import 'src/styles/base/config.scss';
 
-
-
-* {
-  background-color: lightgrey;
-}
 
 .main-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 1240px;
+  width: $app-width;
   align-self: center;
+  background-color: lightgrey;
 
   .post-container {
-    width: 600px;
+    width: $post-container-width;
     margin-top: 30px;
     display: flex;
     flex-direction: column;
@@ -27,7 +24,7 @@
 
 
   .ads-container {
-    width: 350px;
+    width: $ad-container-width;
     height: 100%;
     display: flex;
     flex-direction: column;

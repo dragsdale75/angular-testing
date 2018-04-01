@@ -50,3 +50,22 @@ $color--warning: $color--orange; // Good color for success etc.
 $color--subtle: $color--grey; // Subtle color for subtle text
 
 $gutter: 2%;
+
+$lightTextOpacity: .7;
+
+.row { clear: both}
+.column { padding: 0 $gutter}
+
+@for $i from 1 through 12 {
+  $w: ($i / 12) * 100%;
+  .md-#{$i} {
+    width: $w;
+    float: left;
+  }
+}
+
+
+$app-width: 1240px;
+$post-container-width: 620px;
+$ad-container-width: $post-container-width * .78;
+

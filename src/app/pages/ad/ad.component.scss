@@ -1,28 +1,28 @@
+@import 'src/styles/base/config.scss';
 
+$padding: 20px;
 
+// 483
 .ad {
   display: flex;
   flex-direction: column;
-  width:350px;
-  height: 300px;
+  width:$ad-container-width; //350
+
   justify-content: space-around;
   background-color: white;
 
 
   .title {
-    padding-left: 20px;
-    opacity: .7;
+    padding-left: $padding;
+    opacity: $lightTextOpacity;
     line-height: 2em;
 
 
   }
 
   .image {
-    padding-left: 20px;
-    padding-bottom: 20px;
-    width: 320px;
-    height: 320px;
-
-
+    padding-left: $padding;
+    padding-bottom: $padding;
+    width: $ad-container-width - $padding;
   }
 }

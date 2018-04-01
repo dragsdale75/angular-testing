@@ -1,7 +1,5 @@
+@import 'src/styles/base/config';
 
-// app-post {
-//   // box-shadow: 0 1px 2px 0 rgba(0,0,0,0.30);
-// }
 
 .title-container {
   display: flex;
@@ -28,7 +26,7 @@
     align-self: initial;
 
     .date {
-      opacity: .7;// $dimOpacity;
+      opacity: $lightTextOpacity;
     }
     .name {
       font-weight: bold;
@@ -40,7 +38,7 @@
     width: 20px;
     padding: 6px;
     text-align: right;
-    opacity:  .7;
+    opacity:  $lightTextOpacity;
 
 
   }
@@ -61,10 +59,10 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  opacity: 0.85;
+  opacity: $lightTextOpacity;
   font-size: .85em;
   line-height: 1.5em;
-  border-width: 2%;
+  border-width: $gutter;
   background-color: white;
-  padding: 2%;
+  padding: $gutter;
 }
