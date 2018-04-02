@@ -26,7 +26,6 @@ export class PostService {
 
   createPost(newPost: Post) {
     this.posts.push(newPost);
-
   }
 
   deletePost(post: Post) {
