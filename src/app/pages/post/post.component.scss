@@ -1,11 +1,12 @@
 @import 'src/styles/base/config';
 
-
+// 420
 .title-container {
   display: flex;
   flex-direction: row;
   background-color: white;
   align-self: auto;
+  justify-content: space-between;
 
   .post-info-image {
     padding: 15px;
@@ -21,7 +22,7 @@
   }
 
   .post-info-name-date {
-    width: 475px;
+    width: $post-container-width * .78; // 550px;
     padding-top: 20px;
     align-self: initial;
 
