@@ -1,40 +1,50 @@
-<form (ngSubmit)="onSubmit()" class="form-container">
+<form autocomplete="off" [formGroup]="postForm" (ngSubmit)="onSubmit()" class=form-container>
   <div>
     <label for="name">Name</label>
+
+    <span *ngIf="(postForm.get('name').touched && !postForm.get('name').valid)" [ngClass]="{'error': (postForm.get('name').touched && !postForm.get('name').valid)}">
+      Name is required</span>
   </div>
   <div>
-    <input type="text" [(ngModel)]="newPost.name" id="name" name="name" required>
+    <input type="text" required #name formControlName="name">
     <br>
     <br>
   </div>
   <div>
     <label for="avatarUrl">URL for Avatar Photo</label>
-    </div>
-    <div>
-      <input type="text" [(ngModel)]="newPost.avatarUrl" id="avatarUrl" name="avatarUrl" required>
-      <br>
-      <br>
-    </div>
+    <span *ngIf="(postForm.get('avatarUrl').touched && !postForm.get('avatarUrl').valid)" [ngClass]="{'error': (postForm.get('avatarUrl').touched && !postForm.get('avatarUrl').valid)}">
+      An valid Avatar Url is required (include http/https)</span>
+
+  </div>
+  <div>
+    <input type="text" pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)"
+      required #avatarURL formControlName="avatarUrl">
+    <br>
+    <br>
+  </div>
 
   <div>
     <label for="largeImageUrl">URL for Large Photo</label>
-    </div>
-    <div>
-    <input type="text" [(ngModel)]="newPost.largeImageUrl" id="largeImageUrl" name="largeImageUrl" required>
+    <span *ngIf="(postForm.get('largeImageUrl').touched && !postForm.get('largeImageUrl').valid)" [ngClass]="{'error': (postForm.get('largeImageUrl').touched && !postForm.get('largeImageUrl').valid)}">
+      An Image Url is required  (include http/https)</span>
+  </div>
+  <div>
+    <input type="text" pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)"
+      required #largeImageUrl formControlName="largeImageUrl">
     <br>
     <br>
   </div>
   <div>
     <label for="message">Message</label>
+    <span *ngIf="(postForm.get('message').touched && !postForm.get('message').valid)" [ngClass]="{'error': (postForm.get('message').touched && !postForm.get('message').valid)}">
+      Please enter a message!</span>
   </div>
   <div>
-    <input type="text" [(ngModel)]="newPost.message" id="message" name="message" required>
-    <br><br>
+    <input type="text" required #message formControlName="message">
+    <br>
+    <br>
   </div>
   <div>
-    <button type="submit">Submit</button>
+    <button type="submit" [ngClass]="{'disabled': !postForm.valid }" [disabled]='!postForm.valid'>Save</button>
   </div>
 </form>
-<div [hidden]="noValidationError">
-  <div>{{errorMessage}}</div>
-</div>

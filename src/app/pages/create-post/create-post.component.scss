@@ -4,6 +4,7 @@
 
   label {
     opacity: .7;
+
   }
 
   input {
@@ -19,5 +20,14 @@
     height: 30px;
     background-color: rgb(59, 109, 201);
     color: white;
+
+  }
+  .error {
+    color: red;
+  }
+
+  .disabled {
+    color:lightgray;
+    background-color:  rgb(80, 115, 182);
   }
 }
