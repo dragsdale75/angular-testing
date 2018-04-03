@@ -3,7 +3,7 @@
     <label for="name">Name</label>
 
     <span *ngIf="(postForm.get('name').touched && !postForm.get('name').valid)" [ngClass]="{'error': (postForm.get('name').touched && !postForm.get('name').valid)}">
-      Name is required</span>
+      Please enter your name</span>
   </div>
   <div>
     <input type="text" required #name formControlName="name">
@@ -13,7 +13,7 @@
   <div>
     <label for="avatarUrl">URL for Avatar Photo</label>
     <span *ngIf="(postForm.get('avatarUrl').touched && !postForm.get('avatarUrl').valid)" [ngClass]="{'error': (postForm.get('avatarUrl').touched && !postForm.get('avatarUrl').valid)}">
-      An valid Avatar Url is required (include http/https)</span>
+      Please enter a valid Avatar Url (include http/https)</span>
 
   </div>
   <div>
@@ -26,7 +26,7 @@
   <div>
     <label for="largeImageUrl">URL for Large Photo</label>
     <span *ngIf="(postForm.get('largeImageUrl').touched && !postForm.get('largeImageUrl').valid)" [ngClass]="{'error': (postForm.get('largeImageUrl').touched && !postForm.get('largeImageUrl').valid)}">
-      An Image Url is required  (include http/https)</span>
+      Please enter an Image Url  (include http/https)</span>
   </div>
   <div>
     <input type="text" pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)"

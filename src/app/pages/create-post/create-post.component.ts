@@ -79,7 +79,8 @@ export class CreatePostComponent implements OnInit {
       this.newPost.postDate = new Date();
       this.postService.createPost(this.newPost);
       // Reset the form for the next entry
-      this.newPost = new Post();
+      //this.newPost = new Post();
+      this.createForm();
 
   }
 
